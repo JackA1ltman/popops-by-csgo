@@ -1,0 +1,101 @@
+.popBackground{
+    display: none;
+    background-color: grey;/*背景颜色可根据需求修改*/
+    position: fixed;
+    max-height: 100%;
+    top: 0;right: 0;bottom :0;left: 0;
+    z-index: 10;
+    opacity: 0.6;/*背景透明度可根据需求修改*/
+}
+/*设置弹窗背景样式*/
+.popCore{
+    /* 弹窗宽高可根据情况自行设定，或直接使用默认大小 */
+    display: none;
+    background-color: black;
+    z-index: 11;
+    max-width: 800px;width: 800px;/* 此处为宽度和最大宽度 */
+    max-height: 400px;height: 400px;/* 此处为高度和最大高度 */
+    position: fixed;
+    top: 0;right: 0;bottom :0;left: 0;
+    margin: auto;
+    border: 1px solid #3D3D3D;
+    animation-name: display;
+    animation-duration: 0.2s;
+}
+/*设置弹窗本体框架*/
+@keyframes display {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/*设置弹窗本体显示动画*/
+.popCoreGrid{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 85% 15%;
+}
+/*设置弹窗内部排列样式*/
+.popContent{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 3% 97%;
+    box-shadow: 0 0 9px #242424;
+}
+/*设置弹窗内容框架*/
+.popContentCore{
+    background: radial-gradient(#ffffff 10%, #4b69ff 45%, #101822 95%);/*可根据情况修改背景颜色*/
+}
+/*设置弹窗内容右边框架*/
+.popContentFloor{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 50% 50%;
+}
+/*设置弹窗内容本体分层框架*/
+.popContentTop{
+    margin-left: 5%;
+    margin-top: 5%;
+    font-size: 2.5em;
+    color: #626670;
+}
+/*设置弹窗内容本体分层上部*/
+.popContentDown{
+    display: grid;
+    grid-template-rows: 60% 40%;
+}
+.popContentDownTitle{
+    margin-left: 5%;
+    margin-top: 10%;
+    font-size: 1.2em;
+    color: #C5C6CA;
+}
+/*设置弹窗内容本体分层下部标题*/
+.popContentDownOther{
+    margin-left: 5%;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 10% 90%;
+    align-content: center;
+}
+/*设置弹窗内容本体分层下部另外内容*/
+.popBar{
+    background: linear-gradient(#4b69ff 45%, #2D3F8D 95%);
+}
+/*设置弹窗内容左边条*/
+.popButton{
+    background-color: #2C2C2C;
+}
+/*设置按钮背景样式*/
+.popButton button{
+    width: 60px;height: 50px;
+    background-color: #2C2C2C;
+    color: #ffffff;
+    border: 0;
+}
+/*设置按钮样式*/
+.popButton button:hover{
+    background-color: #272727;
+}
+/*设置按钮鼠标悬浮样式*/
+.popButton button:active{
+    color: grey;
+}

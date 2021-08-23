@@ -1,0 +1,67 @@
+.itemPopBackground{
+    display: none;
+    background-color: grey;/*背景颜色可根据需求修改*/
+    position: fixed;
+    max-height: 100%;
+    height: 100%;
+    top: 0;right: 0;bottom :0;left: 0;
+    z-index: 10;
+    opacity: 0.6;/*背景透明度可根据需求修改*/
+}
+/*设置弹窗背景样式*/
+.itemPopCore{
+    /* 弹窗宽高可根据情况自行设定，或直接使用默认大小 */
+    display: none;
+    background-color: black;
+    z-index: 11;
+    max-width: 600px;width: 600px;/* 此处为宽度和最大宽度 */
+    max-height: 300px;height: 300px;/* 此处为高度和最大高度 */
+    position: fixed;
+    top: 0;right: 0;bottom :0;left: 0;
+    margin: auto;
+    border: 1px solid #3D3D3D;
+    animation-name: display;
+    animation-duration: 0.2s;
+}
+/*设置弹窗本体框架*/
+@keyframes display {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/*设置弹窗本体显示动画*/
+.itemPopCoreGrid{
+    display: grid;
+    height: 100%;
+    grid-template-rows: 30% 50% 20%;
+}
+/*设置弹窗内部排列样式*/
+.itemPopTitle{
+    background-color: #252525;
+}
+/*设置标题背景样式*/
+.itemPopContent,.itemPopButton{
+    background-color: #2C2C2C;
+}
+/*设置内容和按钮背景样式*/
+.itemPopTitle div{
+    font-size: 2.2em;
+    color: #8B8B8B;
+}
+.itemPopContent div{
+    color: #ADADAD;
+}
+/*设置标题和内容的字体颜色*/
+.itemPopButton button{
+    width: 60px;height: 50px;
+    background-color: #2C2C2C;
+    color: #ffffff;
+    border: 0;
+}
+/*设置按钮样式*/
+.itemPopButton button:hover{
+    background-color: #272727;
+}
+/*设置按钮鼠标悬浮样式*/
+.itemPopButton button:active{
+    color: grey;
+}

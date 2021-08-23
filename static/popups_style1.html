@@ -1,0 +1,33 @@
+<style>
+    .itemPopDiv{
+        margin-left: 5%;margin-top: 3%;margin-bottom: 5%;
+    }
+    .itemPopButtonDiv{
+        float: right;margin-right: 5%;
+    }
+</style>
+
+<link rel="stylesheet" href="css/popups.css"><!-- 指派CSS文件 -->
+
+<div class="itemPopBackground" id="itemPopupsBackground"></div><!-- 背景 -->
+
+<div class="itemPopCore" id="itemPopupsWindow"><!-- 弹窗本体 -->
+    <div class="itemPopCoreGrid">
+
+        <div class="itemPopTitle">
+            <div class="itemPopDiv"><? echo $itemPopTitle ?></div>
+        </div>
+        <!-- 标题 -->
+
+        <div class="itemPopContent">
+            <div class="itemPopDiv"><? echo $itemPopContent ?></div>
+        </div>
+        <!-- 通知内容 -->
+
+        <div class="itemPopButton">
+            <div class="itemPopButtonDiv"><? echo $itemPopButton ?></div>
+        </div>
+        <!-- 按钮 -->
+
+    </div>
+</div>
